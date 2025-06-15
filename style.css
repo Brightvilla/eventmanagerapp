@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  flex: 2;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+select {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: #394577;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #2b335d;
+}
+
+#guest-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.guest-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafafa;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  border-left: 8px solid transparent;
+  transition: background-color 0.3s;
+}
+
+.guest-item.friend {
+  border-left-color: #2196F3;
+}
+
+.guest-item.family {
+  border-left-color: #FF5722;
+}
+
+.guest-item.colleague {
+  border-left-color: #9C27B0;
+}
+
+.guest-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.guest-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.guest-meta {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.status {
+  cursor: pointer;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 1rem;
+  border: 1px solid #ccc;
+  background: #eee;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.status.attending {
+  background-color: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+}
+
+.status.not-attending {
+  background-color: #f44336;
+  color: white;
+  border-color: #f44336;
+}
+
+.guest-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: #777;
+  transition: color 0.3s;
+}
+
+.guest-actions button:hover {
+  color: #000;
+}
+
+.edit-input {
+  font-size: 1rem;
+  padding: 0.2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
