@@ -1,147 +1,121 @@
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  background: #f0f2f5;
-  margin: 0;
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
+    font-family: Arial, sans-serif;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 1rem;
+    max-width: px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+    max-height: 1000px;
+    padding: 100px;
+    background-color: #fff;
+    border: 10px solid rgb(15, 58, 70);
 }
 
 form {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: aqua;
 }
 
-input[type="text"] {
-  flex: 2;
-  padding: 0.5rem;
-  font-size: 1rem;
+input, select, button {
+    padding: 30px;
+    font-size: 26px;
 }
 
-select {
-  flex: 1;
-  padding: 0.5rem;
-  font-size: 1rem;
+input {
+    flex: 4;
 }
 
-button[type="submit"] {
-  flex: 1;
-  padding: 0.5rem;
-  font-size: 1rem;
-  background: #394577;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+select, button {
+    flex: 2;
 }
 
-button[type="submit"]:hover {
-  background: #2b335d;
+/* Guest List */
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-#guest-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin: 5px 0;
+    border-left: 5px solid gray;
+    border-radius: 5px;
 }
 
-.guest-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #fafafa;
-  padding: 0.5rem 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 4px;
-  border-left: 8px solid transparent;
-  transition: background-color 0.3s;
+/* Category colors */
+.friend { border-left-color: blue; }
+.family { border-left-color: green; }
+.colleague { border-left-color: purple; }
+
+/* RSVP colors */
+.attending { color: green; font-weight: bold; }
+.not-attending { color: red; font-weight: bold; }
+
+/* Buttons */
+button {
+    border: red;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
 }
 
-.guest-item.friend {
-  border-left-color: #2196F3;
+button:hover {
+    background-color: green;
 }
 
-.guest-item.family {
-  border-left-color: #FF5722;
+/* Submit Button */
+#submit-btn {
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    border: none;
 }
 
-.guest-item.colleague {
-  border-left-color: #9C27B0;
+#submit-btn:hover {
+    background-color: #0056b3;
 }
 
-.guest-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.guest-name {
-  font-weight: bold;
-  font-size: 1.1rem;
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
 }
 
-.guest-meta {
-  font-size: 0.8rem;
-  color: #666;
+th {
+    background-color: #f4f4f4;
 }
 
-.status {
-  cursor: pointer;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  -webkit-user-select: none;
-  user-select: none;
-  margin-right: 1rem;
-  border: 1px solid #ccc;
-  background: #eee;
-  transition: background-color 0.3s, color 0.3s;
-}
+.attending { color: green; font-weight: bold; }
+.not-attending { color: red; font-weight: bold; }
 
-.status.attending {
-  background-color: #4CAF50;
-  color: white;
-  border-color: #4CAF50;
-}
-
-.status.not-attending {
-  background-color: #f44336;
-  color: white;
-  border-color: #f44336;
-}
-
-.guest-actions button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-left: 0.5rem;
-  font-size: 1rem;
-  color: #777;
-  transition: color 0.3s;
-}
-
-.guest-actions button:hover {
-  color: #000;
-}
-
-.edit-input {
-  font-size: 1rem;
-  padding: 0.2rem;
-  width: 100%;
-  box-sizing: border-box;
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
