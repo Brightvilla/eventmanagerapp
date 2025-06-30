@@ -1,121 +1,81 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 600px;
+    margin: auto;
+    padding: 5px;
+    margin-left: 450px;
+    background-color: rgb(221, 218, 227);
+
 }
 
-.container {
-    max-width: px;
-    background: white;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    border-radius: 10px;
-    text-align: center;
-    max-height: 1000px;
-    padding: 100px;
-    background-color: #fff;
-    border: 10px solid rgb(15, 58, 70);
+#centre{
+  margin-left: 213px;
+  width: 500px;
+  height: auto;
+}
+
+h1{
+  color:black;
+  background-color: silver;
+  border-radius: 20px;
+  margin-left: 320px;
+  text-align: center;
+  padding: 2px;
+  align-content:space-evenly;
+  border: 2px solid transparent;
+  
+}
+
+#guest-name{
+  background-color:rgb(71, 104, 110);
+  color: black;
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px;
+  
+}
+
+#guest-category{
+    background-color:rgb(71, 111, 113);
+  color: black;
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px;
+}
+
+#submit{
+   background-color:rgb(91, 147, 145);
+  color: black;
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px;
 }
 
 form {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    background-color: aqua;
-}
+    margin-bottom:20px;
 
-input, select, button {
-    padding: 30px;
-    font-size: 26px;
-}
-
-input {
-    flex: 4;
-}
-
-select, button {
-    flex: 2;
-}
-
-/* Guest List */
-ul {
-    list-style-type: none;
-    padding: 0;
 }
 
 li {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #f4f4f4;
-    margin: 5px 0;
-    border-left: 5px solid gray;
-    border-radius: 5px;
+    padding: 20px;
+    border-bottom: 2px solid #ccc;
 }
 
-/* Category colors */
-.friend { border-left-color: blue; }
-.family { border-left-color: green; }
-.colleague { border-left-color: purple; }
-
-/* RSVP colors */
-.attending { color: green; font-weight: bold; }
-.not-attending { color: red; font-weight: bold; }
-
-/* Buttons */
-button {
-    border: red;
-    cursor: pointer;
-    padding: 5px 10px;
-    font-size: 14px;
+.category-tag {
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  color: white;
+  margin-left: 10px;
 }
-
-button:hover {
-    background-color: green;
+.friend {
+  background-color: #50a553;
 }
-
-/* Submit Button */
-#submit-btn {
-    background-color: green;
-    color: white;
-    border-radius: 5px;
-    border: none;
+.family {
+  background-color: #2196F3;
 }
-
-#submit-btn:hover {
-    background-color: #0056b3;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: center;
-}
-
-th {
-    background-color: #f4f4f4;
-}
-
-.attending { color: green; font-weight: bold; }
-.not-attending { color: red; font-weight: bold; }
-
-button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+.colleague {
+  background-color: #374e87;
 }

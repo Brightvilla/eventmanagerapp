@@ -3,39 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guest List Manager</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="1746386538081.png">
-    <script src="./"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Guest List Manager</h1>
-        <form id="guest-form">
-            <input type="text" id="guest-name" placeholder="Enter guest name" required>
-            <label for="guest-category">Category:</label>
-            <select id="guest-category">
-                <option value="Friend">Friend</option>
-                <option value="Family">Family</option>
-                <option value="Colleague">Colleague</option>
-            </select>
-            <button type="submit">Add Guest</button>
-        </form>
+    <h1>Event Guest List</h1>
+    <div id="centre">
+  <form id="guest-form">
+  <input type="text" name="" id="guest-name" placeholder="Enter guest name" required>
 
-        <!-- Guest List Table -->
-        <table id="guest-table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>RSVP Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody id="guest-list"></tbody>
-        </table>
+  <label for="guest-category">Category:</label> 
+  <select id="guest-category" required>
+    <option value="" disabled selected>Select category</option>
+    <option value="Friend">Friend</option>
+    <option value="Family">Family</option>
+    <option value="Colleague">Colleague</option>
+  </select>
+ <button id="submit" type="submit">Add Guest</button>
+ </form>    
     </div>
-
-    <script src="index.js"></script>
+     <ul id="guest-list"></ul>
+ <script src="./index.js"></script>
 </body>
 </html>
