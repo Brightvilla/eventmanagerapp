@@ -3,26 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Event Guest List Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="src/index.js" defer></script>
 </head>
 <body>
-    <h1>Event Guest List</h1>
-    <div id="centre">
-  <form id="guest-form">
-  <input type="text" name="" id="guest-name" placeholder="Enter guest name" required>
 
-  <label for="guest-category">Category:</label> 
-  <select id="guest-category" required>
-    <option value="" disabled selected>Select category</option>
-    <option value="Friend">Friend</option>
-    <option value="Family">Family</option>
-    <option value="Colleague">Colleague</option>
-  </select>
- <button id="submit" type="submit">Add Guest</button>
- </form>    
+    <div class="container">
+        <header>
+            <h1>Event Guest List Manager</h1>
+        </header>
+        
+        <main>
+            <div id="alert-message" class="alert" style="display: none;"></div>
+
+            <form id="add-guest-form" class="guest-form">
+                <input 
+                    type="text" 
+                    id="guest-name" 
+                    placeholder="Enter guest's name" 
+                    required 
+                />
+                <select id="guest-category" required>
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="Friend">Friend</option>
+                    <option value="Family">Family</option>
+                    <option value="Colleague">Colleague</option>
+                </select>
+                <button type="submit">Add Guest</button>
+            </form>
+
+            <div class="guest-list-container">
+                <h2>Guest List</h2>
+                <ul id="guest-list">
+                    </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>A Code Challenge Deliverable</p>
+        </footer>
     </div>
-     <ul id="guest-list"></ul>
- <script src="./index.js"></script>
+
 </body>
 </html>

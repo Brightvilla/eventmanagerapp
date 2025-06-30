@@ -1,81 +1,166 @@
+/* General Styling */
+:root {
+    --primary-color: #5f9fe7;
+    --danger-color: #c64554;
+    --success-color: #85d233;
+    --warning-color: #eaa435;
+    --light-gray: #f4f4f4;
+    --dark-gray: #753030;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 600px;
-    margin: auto;
-    padding: 5px;
-    margin-left: 450px;
-    background-color: rgb(221, 218, 227);
-
-}
-
-#centre{
-  margin-left: 213px;
-  width: 500px;
-  height: auto;
-}
-
-h1{
-  color:black;
-  background-color: silver;
-  border-radius: 20px;
-  margin-left: 320px;
-  text-align: center;
-  padding: 2px;
-  align-content:space-evenly;
-  border: 2px solid transparent;
-  
-}
-
-#guest-name{
-  background-color:rgb(71, 104, 110);
-  color: black;
-  border-radius: 30px;
-  text-align: center;
-  padding: 10px;
-  
-}
-
-#guest-category{
-    background-color:rgb(71, 111, 113);
-  color: black;
-  border-radius: 30px;
-  text-align: center;
-  padding: 10px;
-}
-
-#submit{
-   background-color:rgb(91, 147, 145);
-  color: black;
-  border-radius: 30px;
-  text-align: center;
-  padding: 10px;
-}
-
-form {
-    margin-bottom:20px;
-
-}
-
-li {
-    display: flex;
-    justify-content: space-between;
+    font-family: var(--font-family);
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    margin: 0;
     padding: 20px;
-    border-bottom: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+.guest-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.guest-form input, .guest-form select {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #3a3e53;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.guest-form button {
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.guest-form button:hover {
+    background-color: #357abd;
+}
+
+/* Guest List Styling */
+.guest-list-container h2 {
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#guest-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.guest-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.guest-item:hover {
+    background-color: #f0f0f0;
+}
+
+.guest-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.guest-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.guest-item.attending .guest-name {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.timestamp {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.guest-actions button {
+    margin-left: 8px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.guest-actions button:hover {
+    opacity: 0.8;
+}
+
+.remove-btn { background-color: var(--danger-color); }
+.rsvp-btn { background-color: var(--success-color); }
+.edit-btn { background-color: var(--warning-color); }
+
+/* Category Tags */
 .category-tag {
-  padding: 3px 8px;
-  border-radius: 12px;
-  font-size: 0.8em;
-  color: white;
-  margin-left: 10px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
-.friend {
-  background-color: #50a553;
+
+.tag-Friend { background-color: #2ecc71; }
+.tag-Family { background-color: #3498db; }
+.tag-Colleague { background-color: #f1c40f; color: #333; }
+
+/* Alert Message */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--danger-color);
+    color: white;
 }
-.family {
-  background-color: #2196F3;
-}
-.colleague {
-  background-color: #374e87;
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #aaa;
+    font-size: 0.9rem;
 }
